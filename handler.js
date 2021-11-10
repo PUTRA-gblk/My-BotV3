@@ -87,8 +87,8 @@ module.exports = {
           if (!isNumber(user.anakrubah)) user.anakrubah = 0
           if (!isNumber(user.makananpet)) user.makananpet = 0
           
-          if (!isNumber(user.exp)) user.exp = 0
-          if (!isNumber(user.limit)) user.limit = 15
+          if (!isNumber(user.exp)) user.exp = 1000000
+          if (!isNumber(user.limit)) user.limit = 1000
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           
           if (!isNumber(user.antispam)) user.antispam = 0
@@ -348,8 +348,8 @@ ${(global.owner).map((v, i) => 'Owner ' + (i + 1) + ' *: wa.me/' + v + '*').join
           }
           
           m.isCommand = true
-          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 10 // XP Earning per command
-          if (xp > 100) m.reply('Astaghfirullah, Kamu ngecitya?') // Hehehe
+          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 100 // XP Earning per command
+          if (xp > 200) m.reply('Astaghfirullah, Kamu ngecitya?') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buylimit*`, m)
