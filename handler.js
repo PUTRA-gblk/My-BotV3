@@ -348,8 +348,8 @@ ${(global.owner).map((v, i) => 'Owner ' + (i + 1) + ' *: wa.me/' + v + '*').join
           }
           
           m.isCommand = true
-          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 100 // XP Earning per command
-          if (xp > 200) m.reply('Astaghfirullah, Kamu ngecitya?') // Hehehe
+          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 100000 // XP Earning per command
+          if (xp > 999999) m.reply('Astaghfirullah, Kamu ngecitya?') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buylimit*`, m)
