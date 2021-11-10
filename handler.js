@@ -105,7 +105,7 @@ module.exports = {
           if (!isNumber(user.level)) user.level = 0
           if (!('autolevelup' in user)) user.autolevelup = false
         } else global.DATABASE._data.users[m.sender] = {
-          healt: 100,
+          healt: 1000,
           healtlimit: 999999,
           healtlastclaim: 0,
           levellimit: 10,
@@ -156,8 +156,8 @@ module.exports = {
           anakkuda: 0,
           anakrubah: 0,
           makananpet: 0,
-          exp: 0,
-          limit: 15,
+          exp: 1000000,
+          limit: 1000,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
